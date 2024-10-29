@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text Example</title>
+  <link rel="stylesheet" type="text/css" href="styles11.css">
+  <style>
+    /* Default style for large screens */
+    body::before {
+      content: "I’m large.";
+      font-size: 2em;
+    }
+
+    /* Style for small screens (800px or less) */
+    @media (max-width: 800px) {
+      body::before {
+        content: "I’m small.";
+      }
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>

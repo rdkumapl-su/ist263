@@ -1,0 +1,13 @@
+/* Default style for large screens */
+body::before {
+    content: "I’m large.";
+    font-size: 2em;
+  }
+  
+  /* Style for small screens (800px or less) */
+  @media (max-width: 800px) {
+    body::before {
+      content: "I’m small.";
+    }
+  }
+  
