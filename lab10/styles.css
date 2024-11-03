@@ -201,12 +201,19 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
-    nav a {
-        display: block;
-        width: 100%;
-        padding: 10px 0; /* Add some padding for spacing */
+    nav {
+        display: block; /* Ensure the nav takes full width */
     }
+    
+    nav a {
+        display: block; /* Change links to block elements */
+        width: 100%; /* Full-width links */
+        padding: 5px; /* Adjust padding as needed */
+        text-align: left; /* Center the text */
+        margin: 3px 0; /* Space between links */
+    }
+    
     nav span {
-        display: none;
+        display: none; /* Hide pipe characters */
     }
 }
