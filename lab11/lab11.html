@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <link rel="stylesheet" href="https://laferger.github.io/ist263/images/animate.css">
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .container img {
+            width: 100px;
+            cursor: pointer;
+        }
+        #messageBox {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+    <script>
+        // Function to display winning message
+        function WinnerMessage() {
+            document.getElementById("messageBox").innerHTML = "You Won!";
+        }
+
+        // Function to display losing message
+        function TryAgain() {
+            document.getElementById("messageBox").innerHTML = "Wrong Shell - Try Again!";
+        }
+
+        // Function to shuffle the winning shell
+        function ShuffleShells() {
+            const shells = document.querySelectorAll('.container img');
+            const winningIndex = Math.floor(Math.random() * shells.length);
+
+            // Set the onclick events based on random winning shell
+            shells.forEach((shell, index) => {
+                if (index === winningIndex) {
+                    shell.onclick = WinnerMessage;
+                } else {
+                    shell.onclick = TryAgain;
+                }
+            });
+        }
+    </script>
+</head>
+<body onload="ShuffleShells()">
+    <h1>Choose a Walnut</h1>
+    
+    <!-- Walnut images -->
+    <div class="container">
+        <img src="https://laferger.github.io/ist263/images/walnut.png" alt="walnut">
+        <img src="https://laferger.github.io/ist263/images/walnut.png" alt="walnut">
+        <img src="https://laferger.github.io/ist263/images/walnut.png" alt="walnut">
+    </div>
+    
+    <!-- Message display area -->
+    <div id="messageBox"></div>
+</body>
+</html>
+
