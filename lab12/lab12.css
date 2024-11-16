@@ -1,0 +1,7 @@
+#venus, #earth, #mars, #jupiter, #saturn, #uranus, #neptune {
+    display: none;
+}
+
+#venusinfo, #earthinfo, #marsinfo, #jupiterinfo, #saturninfo, #uranusinfo, #neptuneinfo {
+    display: none;
+}
