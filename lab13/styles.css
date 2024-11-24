@@ -144,7 +144,7 @@ nav {
 }
 
 nav a {
-    color: #27374D;; /* Link color */
+    color: #1A1A1A;; /* Link color */
     text-decoration: underline; /* Keeps the underline on links */
 }
 
@@ -221,7 +221,7 @@ nav a:hover {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #27374D;;
+    background-color: #1A1A1A;
     color: white;
     padding: 10px;
     border-radius: 5px;
