@@ -36,7 +36,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: RED;
+    color: blue;
 }
 
 /* Section Styles */
@@ -62,7 +62,7 @@ section p {
 }
 
 section p a {
-    color: #00bcd4;
+    color: red;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
