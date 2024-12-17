@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Film and TV</title>
-  <link rel="stylesheet" type="text/css" href="project6.css">
+  <link rel="stylesheet" type="text/css" href="project7film.css">
   <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+
 </head>
 <body>
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="../project5/homepage.html">Home</a></li>
-        <li><a href="#">HBO Max</a></li>
-        <li><a href="#">Netflix</a></li>
-        <li><a href="#">Disney+</a></li>
-        <li><a href="#">Peacock</a></li>
+        <li><a href="../project 7/home.html">Home</a></li>
+        <li><a href="https://www.max.com/">HBO Max</a></li>
+        <li><a href="https://www.netflix.com/">Netflix</a></li>
+        <li><a href="https://www.disneyplus.com/">Disney+</a></li>
+        <li><a href="https://www.peacocktv.com/">Peacock</a></li>
       </ul>
     </nav>
   </header>
@@ -32,12 +33,12 @@
     <section class="content-grid">
       <article class="item">
         <img src="../images/penguin.jpg" alt="TV Show Poster for HBO Max">
-        <h2>The Penguin</h2>
+        <h2>The penguin</h2>
         <p>HBO Max</p>
       </article>
       <article class="item">
         <img src="../images/one-piece-netflix.jpg" alt="TV Show Poster for Netflix">
-        <h2>One Piece: Live Action</h2>
+        <h2> One Piece: Live Action</h2>
         <p>Netflix</p>
       </article>
       <article class="item">
@@ -64,31 +65,16 @@
   </main>
 
   <footer>
-    <div class="newsletter">
-      <label for="email">Stay in Touch: Join our Newsletter</label>
-      <input type="email" id="email" placeholder="Enter Email">
-      <button type="submit">Subscribe</button>
+    <div class="bg-black-200 p-4 text-center">
+      <label for="email" class="block text-lg">Stay in Touch: Join our Newsletter</label>
+      <input type="email" id="email" class="border rounded px-2 py-1 my-2" placeholder="Enter Email">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded">Subscribe</button>
     </div>
+    
     <p>&copy; 2024 Film and TV</p>
   </footer>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Search bar for filtering shows and films -->
-  <section class="search">
-    <input type="text" id="search-bar" placeholder="Search shows or films...">
-  </section>
-
-  <!-- JavaScript -->
-  <script>
-    document.getElementById('search-bar').addEventListener('input', function() {
-      const filter = this.value.toLowerCase();
-      const items = document.querySelectorAll('.content-grid .item');
     
-      items.forEach(item => {
-        const title = item.querySelector('h2').textContent.toLowerCase();
-        item.style.display = title.includes(filter) ? 'block' : 'none';
-      });
-    });
-  </script>
 </body>
 </html>
-
