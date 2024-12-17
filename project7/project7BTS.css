@@ -62,7 +62,7 @@ section p {
 }
 
 section p a {
-    color: red;
+    color: navy;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
