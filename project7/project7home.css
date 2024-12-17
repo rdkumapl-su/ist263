@@ -155,37 +155,3 @@ footer {
     opacity: 1;
     visibility: visible;
 }
-@media (max-width: 768px) {
-    nav {
-        display: block; /* Ensure the nav takes full width */
-    }
-    
-    nav a {
-        display: block; /* Change links to block elements */
-        width: 100%; /* Full-width links */
-        padding: 5px; /* Adjust padding as needed */
-        text-align: left; /* Center the text */
-        margin: 3px 0; /* Space between links */
-    }
-    
-    nav span {
-        display: none; /* Hide pipe characters */
-    }
-}
-.skip-to-content {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #1A1A1A;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    z-index: 1000;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.skip-to-content:focus {
-    transform: translateY(0);
-}
