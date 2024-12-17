@@ -32,6 +32,7 @@ header nav ul li a {
 header nav ul li a:hover {
     color: #00bcd4;
 }
+
 .header-content h1 {
     margin: 0;
     font-size: 3em;
@@ -66,6 +67,7 @@ header nav ul li a:hover {
     flex: 1 1 calc(33.333% - 1em);
     max-width: calc(33.333% - 1em);
     text-align: center;
+    position: relative; /* To position the popup */
 }
 
 .item img {
@@ -78,6 +80,30 @@ header nav ul li a:hover {
 
 .item h2 {
     margin: 0 0 0.5em;
+}
+
+/* Pop-up Info */
+.popup {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    font-size: 0.9em;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.item:hover .popup {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Footer Section */
@@ -115,10 +141,11 @@ footer {
 
     .content-grid {
         flex-direction: column;
+        padding: 0.5em; /* Reduce padding on mobile */
     }
 
     .item {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Make items stack vertically */
         max-width: 100%;
     }
 
@@ -126,32 +153,35 @@ footer {
         width: 100%; /* Adapt to smaller screens */
         height: auto; /* Maintain aspect ratio */
     }
+
+    .popup {
+        width: 90%; /* Adjust the width of the popup */
+        max-width: none; /* Remove max-width for flexibility */
+        font-size: 0.8em; /* Make the font smaller */
+    }
+
+    footer {
+        padding: 0.5em 0; /* Reduce padding for mobile */
+    }
+
+    .newsletter input {
+        width: 90%; /* Input takes more space on mobile */
+    }
+
+    .newsletter button {
+        width: 90%; /* Button takes more space on mobile */
+    }
 }
 
+/* Hover Effects for Item Images */
 .item:hover img {
     transform: scale(1.1); /* Slight zoom effect */
+    transition: transform 0.3s ease;
 }
-
-/* Pop-up Info */
-.popup {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 200px;
-    opacity: 0;
-    visibility: hidden;
+.section-title {
     text-align: center;
-    font-size: 0.9em;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.item:hover .popup {
-    opacity: 1;
-    visibility: visible;
+    width: 100%;
+    margin-bottom: 1em;
+    font-size: 2em;
+    font-weight: bold;
 }
